@@ -1,12 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Github Graph</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="projects/github-graph/src/app.css" type="text/css" rel="stylesheet">
+    <script src="projects/github-graph/src/graph/scraper.js" charset="utf-8"></script>
+    <script src="projects/github-graph/src/d3/d3.min.js" charset="utf-8"></script>
+    <script src="projects/github-graph/src/graph/app.js" charset="utf-8"></script>
 </head>
+
 <body>
-    Hello world!
+    <div class="loading"></div>
+    <div class="grid-container">
+        <div class="header">
+            <h1>
+                <img class="logo-icon" src="../icon.png" /> GitHub Graph
+                <span class="version">(1.0.2)</span>
+            </h1>
+        </div>
+        <div class="content">
+            <input class="search" type="search" placeholder="Nickname..." />
+            <button class="button" type="submit">Start</button>
+        </div>
+        <div class="profile-loading"></div>
+        <div class="profile">
+            <a target="_blank" ref="#" class="profile-photo">
+                <img class="profile-photo__img" src="" />
+            </a>
+            <h1 class="profile-names">
+                <span class="profile-name"></span>
+                <a target="_blank" href="#" class="profile-nickname"></a>
+            </h1>
+        </div>
+        <div class="svg-container">
+            <svg class="svg-content-responsive"></svg>
+        </div>
+    </div>
 </body>
+
 </html>
